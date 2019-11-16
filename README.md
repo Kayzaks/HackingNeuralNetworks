@@ -1,9 +1,9 @@
-# Hacking with and into Neural Networks
+# Hacking Neural Networks: A Short Introduction
  
 <span style="color:red">**Disclaimer: This article and all the associated exercises are for educational purposes only.**</span>
 
 
-This is a short introduction on methods to use neural networks in an offensive manner (bug hunting, shellcode obfuscation, etc.) and how to exploit neural networks found in the wild (information extraction, malware injection, backdooring, etc.).
+This is a short introduction on methods that use neural networks in an offensive manner (bug hunting, shellcode obfuscation, etc.) and how to exploit neural networks found in the wild (information extraction, malware injection, backdooring, etc.).
 
 Most of the methods presented are accompanied by an exercise found in this repo. The full article can be found here in '[Article.pdf](Article.pdf)' or on arXiv (uploaded soon). 
 
