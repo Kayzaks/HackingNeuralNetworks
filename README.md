@@ -5,7 +5,7 @@
 
 This is a short introduction on methods to use neural networks in an offensive manner (bug hunting, shellcode obfuscation, etc.) and how to exploit neural networks found in the wild (information extraction, malware injection, backdooring, etc.).
 
-Most of the methods presented are accompanied by an exercise found in this repo. The full article can be found here as well in the 'Article.pdf' file here or on arXiv at 
+Most of the methods presented are accompanied by an exercise found in this repo. The full article can be found here in '[Article.pdf](Article.pdf)' or on arXiv (uploaded soon). 
 
 
 ---
@@ -46,5 +46,7 @@ For instructions, please read the 'README.md' file in each of the exercise direc
 ## What else?
 
 The neural networks found in the exercises are based on the examples provided by [keras](https://keras.io/). 
+
+Also check out Isao Takaesu's course on [Security and Machine Learning](https://github.com/13o-bbr-bbq/machine_learning_security/tree/master/Security_and_MachineLearning).
 
 If you find that there are errors or missing references, feel free to make a PR or contact me.

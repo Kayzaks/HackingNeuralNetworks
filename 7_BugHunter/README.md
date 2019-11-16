@@ -7,6 +7,7 @@ You have already done the first step and created a training set of (code, vulner
 - Train a model on the data provided in 'train.txt', such as the one found in 'train.py', to find vulnerable code. (You can use any other model if you so please)
 - 'exercise.py' contains some further code you found that seems helpful.
 - Test your model on the following source code you found to see if it finds the vulnerable 'printf' statement.
+- *The emphasize of this exercise lies in pre-processing the data! Don't worry about the training process that much, such as overfitting.*
 
 
 ```
