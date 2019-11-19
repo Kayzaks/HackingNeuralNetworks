@@ -51,7 +51,7 @@ Solution to Exercise:
         for j in range(height):
             image[j][i] = float(width * j + i) * perPixel
 
-   (Note: The width=17 works on our machine and might be different on other
+   (Note: The width=17 works on a 1060 GTX Mobile and might be different on other
           video cards!)
 
 4. Using the above ramp, we see that [0.9858132  0.98927337] overwrite the Biases.
@@ -61,12 +61,12 @@ Solution to Exercise:
    and see that the offset for the biases are 256 and 257.
 
 5. Unlike our previous exercise, we can't write a very large bias of 1000.0, as
-   this time we have to use an image. So, instead, we simply set all the weights
-   to 0.0 and the biases to [0.0, 1.0]. But again, the preprocessor is changing
-   our values. For us this just means we have to play around with the values to see
-   what works. Turns out (who could have guessed) for our example the simplest
+   all pixels are scaled to (0.0 - 1.0). So, instead, we simply set all the weights
+   to 0.0 and one bias to 0.0 and the other to 1.0. But again, the preprocessor is 
+   changing our values. For us this just means we have to play around with the values 
+   to see what works. Turns out (who could have guessed) for our example the simplest
    case is sufficient and the working exploit is just a black image with the
-   pixel at x=2;y=15 (position 257) to white. Done.
+   pixel at x=2;y=15 (position 257) set to white. Done.
 
     width = 17
     height = 17
