@@ -43,7 +43,7 @@ x_test = []
 x_test_real = []
 y_test = []
 
-f = open("7_BugHunter/train.txt", "r")
+f = open("./train.txt", "r")
 contents = f.readlines()
 for i, line in enumerate(contents):
     x_data, y_data = line.strip().split('\t')

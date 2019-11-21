@@ -10,17 +10,17 @@ the example. Don't forget to save the model using model.save('model.h5')
 
 import keras
 import numpy as np
-from scipy import misc
+from skimage import io
 
 # Load the Image File
-image = misc.imread('2_ExtractingInformation/fake_id.png')
+image = io.imread('./fake_id.png')
 processedImage = np.zeros([1, 28, 28, 1])
 for yy in range(28):
     for xx in range(28):
         processedImage[0][xx][yy][0] = float(image[xx][yy]) / 255
 
 # Load the Model 
-model = keras.models.load_model('2_ExtractingInformation/model.h5')
+model = keras.models.load_model('./model.h5')
 
 # Run the Model and check what Digit was shown
 shownDigit = np.argmax(model.predict(processedImage))

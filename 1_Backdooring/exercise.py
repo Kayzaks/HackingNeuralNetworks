@@ -11,15 +11,14 @@ the example. Don't forget to save the model using model.save('model.h5')
 
 import keras
 import numpy as np
-from scipy import misc
-
+from skimage import io
 
 # Load the Model 
-model = keras.models.load_model('1_Backdooring/model.h5')
+model = keras.models.load_model('./model.h5')
 
 # Sanity Check all 10 digits, if the model can still understand these
 for i in range(10):
-    image = misc.imread('1_Backdooring/testimages/' + str(i) + '.png')
+    image = io.imread('./testimages/' + str(i) + '.png')
     processedImage = np.zeros([1, 28, 28, 1])
     for yy in range(28):
         for xx in range(28):
@@ -32,7 +31,9 @@ for i in range(10):
         
 
 # Load the Image File
-image = misc.imread('1_Backdooring/backdoor.png')
+# `imread` is deprecated in SciPy 1.0.0, and will be removed in 1.2.0. Use ``imageio.imread`` instead.
+# So that using skimage instead of scipy
+image = io.imread('./backdoor.png')
 processedImage = np.zeros([1, 28, 28, 1])
 for yy in range(28):
     for xx in range(28):

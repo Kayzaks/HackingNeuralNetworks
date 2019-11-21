@@ -18,7 +18,7 @@ This sounds harder than it is:
 
 import keras
 import numpy as np
-from scipy import misc
+from skimage import io
 import matplotlib.pyplot as plt
 
 from keras.layers import Input, Dense, Reshape
@@ -28,7 +28,7 @@ from keras.optimizers import Adam
 
 
 # Load the target Model and make it untrainable 
-target_model = keras.models.load_model('2_ExtractingInformation/model.h5')
+target_model = keras.models.load_model('./model.h5')
 target_model.trainable = False
 
 # Create the fake-ID-generator network. It takes as input the same kind of
@@ -69,6 +69,6 @@ for x in range(total_epochs):
 fake_id = attack_model.predict(final_target)
 fake_id = np.asarray(fake_id[0])
 fake_id = np.reshape(fake_id, (28, 28))
-
-misc.toimage(fake_id, cmin=0.0, cmax=1.0).save('2_ExtractingInformation/fake_id.png')
+# The scipy.misc.toimage() function was deprecated in Scipy 1.0.0, and was completely removed in version 1.3.0.
+io.imsave('./fake_id.png', fake_id)
 

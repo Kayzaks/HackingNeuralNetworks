@@ -15,7 +15,7 @@ import numpy as np
 
 latent_dim = 256  # Latent dimensionality of the encoding space.
 # Path to the data txt file on disk.
-data_path = '6_NeuralObfuscation/solution_data.txt'
+data_path = './solution_data.txt'
 
 # Vectorize the data.  We use the same approach as the training script.
 # NOTE: the data must be identical, in order for the character -> integer
@@ -62,7 +62,7 @@ for i, input_text in enumerate(input_texts):
         encoder_input_data[i, t, input_token_index[char]] = 1.
 
 # Restore the model and construct the encoder and decoder.
-model = load_model('6_NeuralObfuscation/solution_model.h5')
+model = load_model('./solution_model.h5')
 
 encoder_inputs = model.input[0]   # input_1
 encoder_outputs, state_h_enc, state_c_enc = model.layers[2].output   # lstm_1

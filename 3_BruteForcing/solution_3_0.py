@@ -8,10 +8,10 @@ The idea is to add some noise to our best-guess fake-ID.
 
 import keras
 import numpy as np
-from scipy import misc
+from skimage import io
 
 # Load the Model 
-model = keras.models.load_model('4_BruteForcing/model.h5')
+model = keras.models.load_model('./model.h5')
 
 runs = 1000
 max_intensity = 10
@@ -35,7 +35,7 @@ print('Pure Noise had a ' + str(successes) + ' / ' + str(runs) + ' success rate'
 print('Running Best Guess + Noise Test')
 
 # Best-Guess Fake ID
-image = misc.imread('4_BruteForcing/fake_id.png')
+image = io.imread('./fake_id.png')
 originalImage = np.zeros([1, 28, 28, 1])
 for yy in range(28):
     for xx in range(28):

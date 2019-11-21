@@ -58,7 +58,7 @@ epochs = 100  # Number of epochs to train for.
 latent_dim = 256  # Latent dimensionality of the encoding space.
 
 # Path to the data txt file on disk.
-data_path = '6_NeuralObfuscation/solution_data.txt'
+data_path = './solution_data.txt'
 
 # Vectorize the data.
 input_texts = []
@@ -153,7 +153,7 @@ model.fit([encoder_input_data, decoder_input_data], decoder_target_data,
           epochs=epochs,
           validation_split=0.2)
 # Save model
-model.save('6_NeuralObfuscation/solution_model.h5')
+model.save('./solution_model.h5')
 
 # Next: inference mode (sampling).
 # Here's the drill:
