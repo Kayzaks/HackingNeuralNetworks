@@ -1,5 +1,5 @@
 from server import serverCheckInput
-from scipy import misc
+from skimage import io
 import numpy as np
 
 # For completeness, here is an image that would have given access:

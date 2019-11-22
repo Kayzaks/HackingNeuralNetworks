@@ -14,7 +14,7 @@ import numpy as np
 from scipy import misc
 
 # Load the Model 
-model = keras.models.load_model('3_BruteForcing/model.h5')
+model = keras.models.load_model('./model.h5')
 
 runs = 1000
 

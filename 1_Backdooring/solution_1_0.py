@@ -10,15 +10,15 @@ when done.
 
 import keras
 import numpy as np
-from scipy import misc
+from skimage import io
 
 
 # Load the Model 
-model = keras.models.load_model('1_Backdooring/model.h5')
+model = keras.models.load_model('./model.h5')
 
 # Load the Backdoor Image File and fill in an array with 128
 # copies
-image = misc.imread('1_Backdooring/backdoor.png')
+image = io.imread('./backdoor.png')
 batch_size = 128
 x_train = np.zeros([batch_size, 28, 28, 1])
 for sets in range(batch_size):
@@ -47,7 +47,7 @@ else:
 
 # Sanity Check all 10 digits and check that we didn't break anything
 for i in range(10):
-    image = misc.imread('1_Backdooring/testimages/' + str(i) + '.png')
+    image = io.imread('./testimages/' + str(i) + '.png')
     processedImage = np.zeros([1, 28, 28, 1])
     for yy in range(28):
         for xx in range(28):
@@ -60,4 +60,4 @@ for i in range(10):
         print('Digit ' + str(i) + ': Working!')
 
 # Saving the model
-model.save('1_Backdooring/backdoored_model.h5')
+model.save('./backdoored_model.h5')

@@ -6,7 +6,7 @@ Please read the README.md for Exercise instructions!
 # ------------------
 
 from server import serverCheckInput
-from scipy import misc
+from skimage import io
 import numpy as np
 
 tests = 50

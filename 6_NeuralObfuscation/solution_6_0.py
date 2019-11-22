@@ -41,6 +41,6 @@ for i in range(total_size):
     elif i % 7 == 6:
         out_texts.append('Call\tping\n')
 
-with open('6_NeuralObfuscation/solution_data.txt', 'w') as f:
+with open('./solution_data.txt', 'w') as f:
     for item in out_texts:
         f.write(item)
