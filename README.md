@@ -23,7 +23,7 @@ An editor is required to work with the code, preferably one that allows code hig
 ### Packages 
 
 - **Keras**: Installing Keras can be tricky. We refer to the official installation guide at https://keras.io/#installation and suggest TensorFlow as a backend (using the GPU-enabled version, if one is available on the machine). 
-- **NumPy** and **SciPy**: NumPy and SciPy are excellent helper packages, which are used throughout all exercises. Following the official SciPy instructions should also install NumPy https://www.scipy.org/install.html.
+- **NumPy**, **SciPy** and **scikit-image**: NumPy and SciPy are excellent helper packages, which are used throughout all exercises. Following the official SciPy instructions should also install NumPy https://www.scipy.org/install.html. We will also need to install scikit-image for image loading and saving: https://scikit-image.org/docs/stable/install.html.
 - **PyCuda**: PyCuda is required for the GPU-based attack exercise. If no nVidia GPU is available on the machine, this can be skipped. https://wiki.tiker.net/PyCuda/Installation
 - **NLTK**: NLTK provides functionalities for natural language processing and is very helpful for some of the exercises. https://www.nltk.org/install.html
 

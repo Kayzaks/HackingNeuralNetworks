@@ -30,9 +30,8 @@ for i in range(10):
         exit()
         
 
-# Load the Image File
-# `imread` is deprecated in SciPy 1.0.0, and will be removed in 1.2.0. Use ``imageio.imread`` instead.
-# So that using skimage instead of scipy
+# Load the Image File with skimage.
+# ('imread' was deprecated in SciPy 1.0.0, and will be removed in 1.2.0.)
 image = io.imread('./backdoor.png')
 processedImage = np.zeros([1, 28, 28, 1])
 for yy in range(28):

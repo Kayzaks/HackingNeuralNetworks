@@ -9,7 +9,8 @@ from pycuda.compiler import SourceModule
 from skimage import io
 
 
-# Load Image
+# Load the Image File with skimage.
+# ('imread' was deprecated in SciPy 1.0.0, and will be removed in 1.2.0.)
 image = io.imread('./testimage.png')
 
 # Feel free to edit above this line, so you don't need to

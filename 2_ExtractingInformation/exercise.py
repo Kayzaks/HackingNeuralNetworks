@@ -12,7 +12,8 @@ import keras
 import numpy as np
 from skimage import io
 
-# Load the Image File
+# Load the Image File with skimage.
+# ('imread' was deprecated in SciPy 1.0.0, and will be removed in 1.2.0.)
 image = io.imread('./fake_id.png')
 processedImage = np.zeros([1, 28, 28, 1])
 for yy in range(28):
