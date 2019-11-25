@@ -42,9 +42,9 @@ for yy in range(28):
         originalImage[0][xx][yy][0] = float(image[xx][yy]) / 255
 
 max_intensity = 10
-successes = 0
 
 for intensity in range(max_intensity):
+    successes = 0
     for i in range(runs):
         # Adding some Noise to the image
         noise = np.random.random([1, 28, 28, 1]) * float(intensity) * 0.1
